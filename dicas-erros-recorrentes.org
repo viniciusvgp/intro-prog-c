@@ -1,0 +1,231 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+#+STARTUP: overview
+#+STARTUP: indent
+
+#+TITLE:     INF01040 - Introdução à Programação
+#+SUBTITLE:  Algumas dicas sobre erros recorrentes
+#+AUTHOR:    Prof. Vinícius Garcia Pinto                                                                                                              
+#+EMAIL:     vinicius.pinto@inf.ufrgs.br                                                                                                              
+#+DATE:      2019/1 - Turma G1 @@latex:\\~\\@@ Aulas Práticas
+
+#+LANGUAGE: pt_BR
+#+OPTIONS: creator:nil timestamp:nil skip:nil email:nil toc:nil num:t ^:nil ~:~ 
+#+TAGS: noexport(n) deprecated(d) ignore(i)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+#+LATEX_HEADER: \usepackage[brazilian]{babel}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+# this should be in local variables, but it is not working yet
+#+LATEX_HEADER: \usepackage{xcolor}
+
+# No label in figures and tables (e.g. Figure 1. bla bla bla)
+#+LATEX_HEADER: \usepackage[labelformat=empty]{caption}
+
+
+Este documento reúne algumas dicas sobre erros e problemas recorrentes 
+no aprendizado da linguagem C. Antes de solicitar ajuda, recomenda-se
+a consulta a esta lista a fim de verificar se o problema/dúvida não se
+enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
+pelo e-mail: vinicius.pinto@inf.ufrgs.br.
+
+** Uso do & no ~scanf~
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+Não esquecer de incluir o ~&~ antes do nome de variáveis escalares dos
+tipos ~int~, ~float~, ~char~ e ~double~. Erros como o programa encerrar logo
+após o usuário digitar algum valor frequentemente estão relacionados
+ao esquecimento do ~&~ no ~scanf~.
+#+Latex: \\
+
+*** Exemplos                                                       :ignore:
+
+*Errado:*
+#+ATTR_LATEX: :options inputencoding=utf8, frame=single, basicstyle=\ttfamily\small, keywordstyle=\bfseries\color{green!40!black}, commentstyle=\itshape\color{purple!40!black}, identifierstyle=\color{blue}, stringstyle=\color{orange}, extentedchars=true, literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ê}{{\^e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {õ}{{\~o}}1 {ú}{{\'u}}1 {ü}{{\"u}}1 {ç}{{\c{c}}}1
+#+begin_src C :exports code :eval no-export
+scanf("%d", var);
+#+end_src
+*Correto:*
+#+begin_src C :exports code :eval no-export
+scanf("%d", &var);
+#+end_src
+
+** Formato no ~printf~ e no ~scanf~
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+A formatação (exemplo: ~%d~, ~%f~, ~%lf~, etc) tem uso semelhante no ~printf~ e
+no ~scanf~, entretanto, a especificação de limitadores como ~%.2f~ ou
+~%4.3f~ é válida *somente* no ~printf~, não devendo ser usada com o comando
+~scanf~.
+#+Latex: \\
+*** Exemplos                                                       :ignore:
+
+*Errado:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+float var1 = 4.2095, var2;
+printf("Valor: %.2f \n", var1);
+printf("Informe um valor real: ");
+scanf("%.2f", &var2);
+#+end_src
+*Correto:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+float var1 = 4.2095, var2;
+printf("Valor: %.2f \n", var1);
+printf("Informe um valor real: ");
+scanf("%f", &var2);
+#+end_src
+
+** Formato incompatível com o tipo da variável 
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+Atenção para a utilização do formato correspondente ao tipo da
+variável.
+
+#+ATTR_LATEX: :align c|c
+| *tipo*  | *exemplo de formato* |
+|-------+--------------------|
+| ~int~   | ~%d~                 |
+| ~float~ | ~%f~                 |
+| ~char~  | ~%c~                 |
+
+
+*** Exemplos                                                       :ignore:
+
+*Errado:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+float var1 = 4.2095;
+int var2 = 7;
+printf("Valor 1: %d \n", var1);
+printf("Valor 2: %d \n", var2);
+#+end_src
+*Correto:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+float var1 = 4.2095;
+int var2 = 7;
+printf("Valor 1: %f \n", var1);
+printf("Valor 2: %d \n", var2);
+#+end_src
+
+** Uso de ~;~ em ~if-else~
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+Atenção em comandos ~if~ e ~else~, *não* deve ser colocado ~;~ no final da
+linha. Lembre-se também que blocos compostos por mais de uma linha de
+código devem ser delimitados por ~{~ e ~}~.
+#+Latex: \\
+
+*** Exemplos                                                       :ignore:
+
+*Errado:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+if(a >= 0);
+  printf("a é positivo \n");
+else;
+  printf("a é negativo \n");
+#+end_src
+*Correto:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+if(a >= 0)
+  printf("a é positivo \n");
+else
+  printf("a é negativo \n");
+#+end_src
+
+
+
+#+Latex: \newpage
+** Inicialização de variáveis 
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+As variáveis devem ser inicializadas antes de utilizá-las.
+#+Latex: \\
+*** Exemplos                                                       :ignore:
+*Errado:*
+#+begin_src C :exports code :eval no-export
+int soma, x, y;
+
+soma = x + y;
+printf("Resultado: %d", soma);
+#+end_src
+*Correto:*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+int soma, x, y;
+
+x = 10;
+
+printf("Digite o valor de y: ");
+scanf("%d", &y);
+
+soma = x + y;
+printf("Resultado: %d", soma);
+#+end_src
+
+** Comparações
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+Ao fazer comparações de igualdade utiliza-se ~==~. O ~=~ serve para
+atribuição, e usá-lo em comparações fará com que o programa não
+execute de maneira adequada. Atenção: este tipo de equívoco não gera
+um erro durante a compilação.
+* Exemplos                                                       :ignore:
+
+#+CAPTION: *Errado*
+#+begin_src C :exports code :eval no-export
+int a = 7;
+
+if( a = 0 ){
+  printf("A vale zero.");
+}
+#+end_src
+
+#+CAPTION: *Correto*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+int a = 7;
+
+if( a == 0 ){
+  printf("A vale zero.");
+}
+#+end_src
+
+
+* Local variables                                                  :noexport:
+# Local Variables:
+# eval: (setq org-latex-listings t)
+# eval: (setq org-latex-packages-alist '(("" "xcolor")))
+# eval: (setq org-latex-packages-alist '(("" "listings")))
+# eval: (setq org-latex-packages-alist '(("" "listingsutf8")))
+# eval: (setq ispell-local-dictionary "brasileiro")
+# eval: (flyspell-mode t)
+# eval: (require 'ox-extra)
+# eval: (ox-extras-activate '(ignore-headlines))
+# End:
+
+#+begin_src emacs-lisp :results output :exports both
+(setq org-latex-listings t)
+(setq org-latex-packages-alist '(("" "xcolor")))
+(setq org-latex-packages-alist '(("" "listings")))
+(setq org-latex-packages-alist '(("" "listingsutf8")))
+(setq org-latex-caption-above t)
+#+end_src
+
+#+RESULTS:
+
+
+
