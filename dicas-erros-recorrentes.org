@@ -358,6 +358,63 @@ b = 7;
 printf("Valor de b: %d", b);
 #+end_src
 
+
+** Laço infinito
+Laços ~for~, ~while~ ou ~do-while~ que não terminam frequentemente estão
+relacionados ao esquecimento da inclusão da atualização da variável de
+controle ou a um erro na lógica de comparação/atualização.
+
+*** Problemas na atualização da variável de controle
+**** Errado                                                       :ignore:
+#+CAPTION: *Errado*
+#+begin_src C :exports code :eval no-export
+int var = 0;
+
+while(var < 10){
+  printf("%d \n", var);
+}
+#+end_src
+
+**** Correto                                                      :ignore:
+#+CAPTION: *Correto*
+#+begin_src C :exports code :eval no-export
+int var = 0;
+
+while(var < 10){
+  printf("%d \n", var);
+  var++;
+}
+#+end_src
+
+*** Problema na lógica de comparação/atualização
+**** Errado                                                       :ignore:
+#+CAPTION: *Errado*
+#+begin_src C :exports code :eval no-export
+int cont = 15;
+int total = 0;
+
+while(cont > 0){
+  total+= cont;
+  cont++;
+}
+
+printf("%d \n", total);
+#+end_src
+
+**** Correto                                                      :ignore:
+#+CAPTION: *Correto*
+#+begin_src C :exports code :eval no-export
+int cont = 15;
+int total = 0;
+
+while(cont > 0){
+  total+= cont;
+  cont--;
+}
+
+printf("%d \n", total);
+#+end_src
+
 * Local variables                                                  :noexport:
 # Local Variables:
 # eval: (setq org-latex-listings t)
