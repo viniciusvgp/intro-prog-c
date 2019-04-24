@@ -32,6 +32,66 @@ a consulta a esta lista a fim de verificar se o problema/dúvida não se
 enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
 pelo e-mail: vinicius.pinto@inf.ufrgs.br.
 
+* Dicas gerais
+** Valores máximos e mínimos para variáveis
+Em alguns problemas é conveniente inicializar variáveis com o valor
+mínimo ou com o valor máximo permitido para aquele tipo. Nestes casos,
+podemos usar bibliotecas adicionais que definem constantes
+representando estes valores de mínimo e máximo.
+
+*** Exemplos: 
+
+#+CAPTION: *Variáveis do tipo =int=*
+#+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\footnotesize
+#+begin_src C :exports both :results output :eval no-export
+#include<limits.h>
+
+int varA = INT_MAX;
+int varB = INT_MIN;
+
+printf("varA contem o maior valor possivel (int): %d ", varA);
+printf("\n");
+printf("varB contem o menor valor possivel (int): %d ", varB);
+printf("\n");
+#+end_src
+
+#+RESULTS:
+: varA contem o maior valor possivel (int): 2147483647 
+: varB contem o menor valor possivel (int): -2147483648
+
+
+#+name: flt-max-min
+#+CAPTION: *Variáveis do tipo =float=*
+#+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\scriptsize
+#+begin_src C :exports both :results output code :wrap "SRC fundamental" :eval no-export
+#include<float.h>
+
+float varA = FLT_MAX;
+float varB = FLT_MIN;
+
+printf("varA contem o maior valor possivel (float): \n  %f ", varA);
+printf("\n");
+printf("varB contem o menor valor possivel (float): \n  %.60f", varB);
+printf("\n");
+
+printf("\nNotacao Exponencial: \n");
+printf("varA contem o maior valor possivel (float): \n  %e ", varA);
+printf("\n");
+printf("varB contem o menor valor possivel (float): \n  %e ", varB);
+printf("\n");
+#+end_src
+
+#+RESULTS: flt-max-min
+: varA contem o maior valor possivel (float): 
+:   340282346638528859811704183484516925440.000000 
+: varB contem o menor valor possivel (float): 
+:   0.000000000000000000000000000000000000011754943508222875079687
+: 
+: Notacao Exponencial: 
+: varA contem o maior valor possivel (float): 
+:   3.402823e+38 
+: varB contem o menor valor possivel (float): 
+:   1.175494e-38
 
 * Erros Recorrentes
 ** Uso do & no ~scanf~
