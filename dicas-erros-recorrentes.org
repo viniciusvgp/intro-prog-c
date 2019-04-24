@@ -105,7 +105,7 @@ printf("\n");
   :unnumbered: t
   :END:
 
-** Uso do & no ~scanf~
+** Uso do ~&~ no ~scanf~
 :PROPERTIES:
   :unnumbered: t
   :END:
