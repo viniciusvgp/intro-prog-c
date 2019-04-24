@@ -48,7 +48,7 @@ representando estes valores de mínimo e máximo.
 
 *** Variáveis do tipo ~int~                                          :ignore:
 #+CAPTION: *Variáveis do tipo ~int~*
-#+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\footnotesize
+#+ATTR_LATEX: :options inputencoding=utf8, frame=single, showstringspaces=false, basicstyle=\ttfamily\footnotesize, keywordstyle=\bfseries\color{green!40!black}, commentstyle=\itshape\color{purple!40!black}, identifierstyle=\color{blue}, stringstyle=\color{orange}, extentedchars=true, literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ê}{{\^e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {õ}{{\~o}}1 {ú}{{\'u}}1 {ü}{{\"u}}1 {ç}{{\c{c}}}1
 #+begin_src C :exports both :results output :eval no-export
 #include<limits.h>
 
