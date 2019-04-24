@@ -222,13 +222,11 @@ else
   printf("a é negativo \n");
 #+end_src
 
-#+Latex: \newpage
 ** Inicialização de variáveis 
 :PROPERTIES:
   :unnumbered: t
   :END:
 As variáveis devem ser inicializadas antes de utilizá-las.
-#+Latex: \\
 
 *** Errado                                                         :ignore:
 #+CAPTION: *Errado:*
