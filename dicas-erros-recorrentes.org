@@ -3,11 +3,10 @@
 #+STARTUP: overview
 #+STARTUP: indent
 
-#+TITLE:     INF01040 - Introdução à Programação
-#+SUBTITLE:  Algumas dicas sobre erros recorrentes
+#+TITLE:     Dicas sobre dúvidas e erros recorrentes no aprendizado da linguagem ~C~
 #+AUTHOR:    Prof. Vinícius Garcia Pinto                                                                                                              
 #+EMAIL:     vinicius.pinto@inf.ufrgs.br                                                                                                              
-#+DATE:      2019/1 - Turma G1 @@latex:\\~\\@@ Aulas Práticas
+#+DATE:      2019/1
 
 #+LANGUAGE: pt_BR
 #+OPTIONS: creator:nil timestamp:nil skip:nil email:nil toc:nil num:t ^:nil ~:~ 
