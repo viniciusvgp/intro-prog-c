@@ -26,7 +26,7 @@
 #+LATEX_HEADER: \usepackage[labelformat=empty]{caption}
 
 
-Este documento reúne algumas dicas sobre erros e problemas recorrentes 
+Este documento reúne algumas dicas sobre dúvidas e erros recorrentes
 no aprendizado da linguagem C. Antes de solicitar ajuda, recomenda-se
 a consulta a esta lista a fim de verificar se o problema/dúvida não se
 enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
