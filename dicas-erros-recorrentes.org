@@ -39,7 +39,7 @@ mínimo ou com o valor máximo permitido para aquele tipo. Nestes casos,
 podemos usar bibliotecas adicionais que definem constantes
 representando estes valores de mínimo e máximo.
 
-*** *Variáveis do tipo ~int~*
+*** Variáveis do tipo ~int~
 #+CAPTION: *Variáveis do tipo ~int~*
 #+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\footnotesize
 #+begin_src C :exports both :results output :eval no-export
@@ -59,7 +59,7 @@ printf("\n");
 : varB contem o menor valor possivel (int): -2147483648
 
 
-*** *Variáveis do tipo ~float~*
+*** Variáveis do tipo ~float~
 #+name: flt-max-min
 #+CAPTION: *Variáveis do tipo ~float~*
 #+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\scriptsize
