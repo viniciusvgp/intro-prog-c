@@ -112,7 +112,6 @@ Não esquecer de incluir o ~&~ antes do nome de variáveis escalares dos
 tipos ~int~, ~float~, ~char~ e ~double~. Erros como o programa encerrar logo
 após o usuário digitar algum valor frequentemente estão relacionados
 ao esquecimento do ~&~ no ~scanf~.
-#+Latex: \\
 
 *** Errado                                                         :ignore:
 #+CAPTION: *Errado:*
