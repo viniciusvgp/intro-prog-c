@@ -33,7 +33,14 @@ enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
 pelo e-mail: vinicius.pinto@inf.ufrgs.br.
 
 * Dicas gerais
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+
 ** Valores máximos e mínimos para variáveis
+:PROPERTIES:
+  :unnumbered: t
+  :END:
 Em alguns problemas é conveniente inicializar variáveis com o valor
 mínimo ou com o valor máximo permitido para aquele tipo. Nestes casos,
 podemos usar bibliotecas adicionais que definem constantes
@@ -94,6 +101,10 @@ printf("\n");
 :   1.175494e-38
 
 * Erros Recorrentes
+:PROPERTIES:
+  :unnumbered: t
+  :END:
+
 ** Uso do & no ~scanf~
 :PROPERTIES:
   :unnumbered: t
