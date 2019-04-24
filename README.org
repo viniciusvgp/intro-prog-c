@@ -9,10 +9,10 @@ disciplinas /INF01202 - Algoritmos e Programação/ e /INF01040 -
 Introdução à Programação/, ministradas por mim no [[http://www.inf.ufrgs.br][Instituto de
 Informática]] da [[http://www.ufrgs.br][UFRGS]].
 
-É sugerido aos alunos que, antes de solicitar ajuda, consultem esta
-lista a fim de verificar se o problema/dúvida não se enquadra em um
-dos casos apresentados. Sugestões e correções são bem-vindas pelo
-e-mail: vinicius.pinto@inf.ufrgs.br ou por [[./issues][aqui]].
+É sugerido aos alunos que, antes de solicitar ajuda, consultem a [[./dicas-erros-recorrentes.org][lista]]
+a fim de verificar se o problema/dúvida não se enquadra em um dos
+casos apresentados. Sugestões e correções são bem-vindas pelo e-mail:
+vinicius.pinto@inf.ufrgs.br ou por [[./issues][aqui]].
 
 
 [[file:by-nc-sa-40-88x31.png]]
