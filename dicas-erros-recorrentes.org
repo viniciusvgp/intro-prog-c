@@ -32,6 +32,8 @@ a consulta a esta lista a fim de verificar se o problema/dúvida não se
 enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
 pelo e-mail: vinicius.pinto@inf.ufrgs.br.
 
+
+* Erros Recorrentes
 ** Uso do & no ~scanf~
 :PROPERTIES:
   :unnumbered: t
