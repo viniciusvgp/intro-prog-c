@@ -14,6 +14,7 @@ a fim de verificar se o problema/dúvida não se enquadra em um dos
 casos apresentados. Sugestões e correções são bem-vindas pelo e-mail:
 vinicius.pinto@inf.ufrgs.br ou por [[./issues][aqui]].
 
+*Acesse a lista [[./dicas-erros-recorrentes.org][aqui]]:* [[./dicas-erros-recorrentes.org]] 
 
 Agradecimentos: 
 - ao Gustavo Sleman, monitor das turmas I e J da INF01202 em 2019/1,
