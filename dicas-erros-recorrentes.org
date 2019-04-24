@@ -147,6 +147,38 @@ scanf("%d", var);
 scanf("%d", &var);
 #+end_src
 
+** Uso de ~"~ no  ~printf~ e no ~scanf~ 
+:PROPERTIES:
+:unnumbered: t
+:END:
+Atenção ao uso de aspas (~"~) no ~printf~ e no ~scanf~. As aspas (~"~)
+delimitam o primeiro parâmetro que é a /string/ com o formato. Logo, os
+demais parâmetros fornecidos ao ~printf~ e ao ~scanf~, _*não devem*_ estar
+entre as aspas (~"~) que delimitam o formato.
+
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado:*
+#+ATTR_LATEX: :options inputencoding=utf8, frame=single, basicstyle=\ttfamily\small, keywordstyle=\bfseries\color{green!40!black}, commentstyle=\itshape\color{purple!40!black}, identifierstyle=\color{blue}, stringstyle=\color{orange}, extentedchars=true, literate={á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ê}{{\^e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {õ}{{\~o}}1 {ú}{{\'u}}1 {ü}{{\"u}}1 {ç}{{\c{c}}}1
+#+begin_src C :exports code :eval no-export
+int a, b = 1;
+
+printf("%d \n, b");
+
+printf("Digite o valor de a");
+scanf("%d, &a");
+#+end_src
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto:*
+#+begin_src C :exports code :eval no-export
+int a, b = 1;
+
+printf("%d \n", b);
+
+printf("Digite o valor de a");
+scanf("%d", &a);
+#+end_src
+
 ** Formato no ~printf~ e no ~scanf~
 :PROPERTIES:
   :unnumbered: t
