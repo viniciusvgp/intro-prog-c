@@ -137,9 +137,9 @@ no ~scanf~, entretanto, a especificação de limitadores como ~%.2f~ ou
 ~%4.3f~ é válida *somente* no ~printf~, não devendo ser usada com o comando
 ~scanf~.
 #+Latex: \\
-*** Exemplos                                                       :ignore:
 
-*Errado:*
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 float var1 = 4.2095, var2;
@@ -147,7 +147,9 @@ printf("Valor: %.2f \n", var1);
 printf("Informe um valor real: ");
 scanf("%.2f", &var2);
 #+end_src
-*Correto:*
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 float var1 = 4.2095, var2;
@@ -171,9 +173,8 @@ variável.
 | ~char~  | ~%c~                 |
 
 
-*** Exemplos                                                       :ignore:
-
-*Errado:*
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 float var1 = 4.2095;
@@ -181,7 +182,9 @@ int var2 = 7;
 printf("Valor 1: %d \n", var1);
 printf("Valor 2: %d \n", var2);
 #+end_src
-*Correto:*
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 float var1 = 4.2095;
@@ -199,9 +202,8 @@ linha. Lembre-se também que blocos compostos por mais de uma linha de
 código devem ser delimitados por ~{~ e ~}~.
 #+Latex: \\
 
-*** Exemplos                                                       :ignore:
-
-*Errado:*
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 if(a >= 0);
@@ -209,7 +211,9 @@ if(a >= 0);
 else;
   printf("a é negativo \n");
 #+end_src
-*Correto:*
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 if(a >= 0)
@@ -218,8 +222,6 @@ else
   printf("a é negativo \n");
 #+end_src
 
-
-
 #+Latex: \newpage
 ** Inicialização de variáveis 
 :PROPERTIES:
@@ -227,15 +229,18 @@ else
   :END:
 As variáveis devem ser inicializadas antes de utilizá-las.
 #+Latex: \\
-*** Exemplos                                                       :ignore:
-*Errado:*
+
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado:*
 #+begin_src C :exports code :eval no-export
 int soma, x, y;
 
 soma = x + y;
 printf("Resultado: %d", soma);
 #+end_src
-*Correto:*
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto:*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 int soma, x, y;
@@ -257,8 +262,8 @@ Ao fazer comparações de igualdade utiliza-se ~==~. O ~=~ serve para
 atribuição, e usá-lo em comparações fará com que o programa não
 execute de maneira adequada. Atenção: este tipo de equívoco não gera
 um erro durante a compilação.
-* Exemplos                                                       :ignore:
 
+*** Errado                                                         :ignore:
 #+CAPTION: *Errado*
 #+begin_src C :exports code :eval no-export
 int a = 7;
@@ -268,6 +273,7 @@ if( a = 0 ){
 }
 #+end_src
 
+*** Correto                                                        :ignore:
 #+CAPTION: *Correto*
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
