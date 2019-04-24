@@ -99,6 +99,27 @@ printf("\n");
 : varB contem o menor valor possivel (float): 
 :   1.175494e-38
 
+** Leitura de variável do tipo ~char~
+Ao fazer a leitura de uma variável do tipo ~char~, é conveniente
+adicionar um espaço em branco antes do ~%c.~ Dessa forma, evita-se a
+interferência de outros possíveis caracteres remanescentes no /buffer/
+de leitura, por exemplo: espaço, fim de linha ou tabulação. 
+
+#+ATTR_LATEX: :options frame=single, basicstyle=\ttfamily\scriptsize
+#+begin_src C :exports both :results output code :wrap "SRC fundamental" :eval no-export
+char var;
+
+do{
+  
+  printf("Olá! \n");
+  
+  printf("Digite \'s\' para repetir: ");
+  scanf(" %c", &var);
+
+}while(var == 's');
+
+#+end_src
+
 * Erros Recorrentes
 :PROPERTIES:
   :unnumbered: t
