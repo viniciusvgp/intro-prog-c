@@ -17,7 +17,7 @@ vinicius.pinto@inf.ufrgs.br ou por [[https://github.com/viniciusvgp/intro-prog-c
 *Acesse a lista [[./dicas-erros-recorrentes.org][aqui]]:* [[./dicas-erros-recorrentes.org]] 
 
 Agradecimentos: 
-- ao Gustavo Sleman, monitor das turmas I e J da INF01202 em 2019/1,
+- ao Gustavo Sleman (@aiwaverse), monitor das turmas I e J da INF01202 em 2019/1,
   pelas dicas, correções e sugestões
 - aos alunos das turmas I e J da INF01202 em 2019/1
 - aos alunos das turmas G1 e I2 da INF01040 em 2019/1
