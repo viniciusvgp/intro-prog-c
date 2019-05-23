@@ -358,6 +358,32 @@ b = 7;
 printf("Valor de b: %d", b);
 #+end_src
 
+** Comparações com dois valores
+Para comparar uma variável com dois outros valores (para testar um
+intervalo, por exemplo), a comparação deve ser feita aos pares
+utilizando os operadores lógicos E (~&&~) e OU (~||~) para compor a
+expressão lógica.
+*** Errado                                                         :ignore:
+#+CAPTION: *Errado*
+#+begin_src C :exports code :eval no-export
+
+if(0 <= var <= 5){
+  printf("Valor está no intervalo fechado de 0 a 5!");
+}
+
+#+end_src
+
+*** Correto                                                        :ignore:
+#+CAPTION: *Correto*
+#+ATTR_LATEX: :options showstringspaces=false
+#+begin_src C :exports code :eval no-export
+
+if(var >= 0 && var <= 5){
+  printf("Valor está no intervalo fechado de 0 a 5!");
+}
+
+#+end_src
+
 
 ** Laço infinito
 Laços ~for~, ~while~ ou ~do-while~ que não terminam frequentemente estão
