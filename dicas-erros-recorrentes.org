@@ -367,8 +367,12 @@ expressão lógica.
 #+CAPTION: *Errado*
 #+begin_src C :exports code :eval no-export
 
+int var = 6;
+
 if(0 <= var <= 5){
-  printf("Valor está no intervalo fechado de 0 a 5!");
+  printf("Valor %d está no intervalo fechado de 0 a 5!", var);
+} else {
+  printf("Valor NÃO %d está no intervalo fechado de 0 a 5!", var);
 }
 
 #+end_src
@@ -378,8 +382,12 @@ if(0 <= var <= 5){
 #+ATTR_LATEX: :options showstringspaces=false
 #+begin_src C :exports code :eval no-export
 
+int var = 6;
+
 if(var >= 0 && var <= 5){
-  printf("Valor está no intervalo fechado de 0 a 5!");
+  printf("Valor %d está no intervalo fechado de 0 a 5!", var);
+} else {
+  printf("Valor NÃO %d está no intervalo fechado de 0 a 5!", var);
 }
 
 #+end_src
