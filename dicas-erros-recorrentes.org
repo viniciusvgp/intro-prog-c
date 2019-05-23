@@ -151,7 +151,7 @@ scanf("%d", &var);
 :PROPERTIES:
 :unnumbered: t
 :END:
-Atenção ao uso de aspas (~"~) no ~printf~ e no ~scanf~. As aspas (~"~)
+Atenção ao uso de aspas (") no ~printf~ e no ~scanf~. As aspas (~"~)
 delimitam o primeiro parâmetro que é a /string/ com o formato. Logo, os
 demais parâmetros fornecidos ao ~printf~ e ao ~scanf~, _*não devem*_ estar
 entre as aspas (~"~) que delimitam o formato.
