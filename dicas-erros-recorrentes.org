@@ -471,9 +471,9 @@ for(int i = 0; i < 10; i++){
 #+end_src
 
 ** Limites em arranjos/vetores
-Em ~C~, o acesso a elementos de vetores começa em $0$. Dessa forma, o
-acesso ao primeiro elemento de um vetor de tamanho $N$ é feito com $0$
-e o último com $N-1$.
+Em ~C~, o acesso a elementos de vetores começa em 0. Dessa forma, o
+acesso ao primeiro elemento de um vetor de tamanho N é feito com 0
+e o último com N-1.
 
 *** Errado                                                         :ignore:
 #+CAPTION: *Errado*
