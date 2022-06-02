@@ -29,7 +29,7 @@ Este documento reúne algumas dicas sobre dúvidas e erros recorrentes
 no aprendizado da linguagem C. Antes de solicitar ajuda, recomenda-se
 a consulta a esta lista a fim de verificar se o problema/dúvida não se
 enquadra em um dos casos abaixo. Sugestões e correções são bem-vindas
-pelo e-mail: vinicius.pinto@inf.ufrgs.br.
+pelo e-mail: vinicius.pinto@furg.br.
 
 * Dicas gerais
 :PROPERTIES:
