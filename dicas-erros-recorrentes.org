@@ -5,8 +5,8 @@
 
 #+TITLE:     Dicas sobre dúvidas e erros recorrentes no aprendizado da linguagem ~C~
 #+AUTHOR:    Prof. Vinícius Garcia Pinto                                                                                                              
-#+EMAIL:     vinicius.pinto@inf.ufrgs.br                                                                                                              
-#+DATE:      2019/1
+#+EMAIL:     vinicius.pinto@furg.br                                                                                                              
+#+DATE:      2022/1
 
 #+LANGUAGE: pt_BR
 #+OPTIONS: creator:nil timestamp:nil skip:nil email:nil toc:nil num:t ^:nil ~:~ 
